@@ -1,6 +1,9 @@
 package com.designpatterns.flyweight;
 
 public class Demo {
+  public static void main(String args[]) {
+    show();
+  }
   public static void show() {
     var sheet = new SpreadSheet();
     sheet.setContent(0, 0, "Hello");
