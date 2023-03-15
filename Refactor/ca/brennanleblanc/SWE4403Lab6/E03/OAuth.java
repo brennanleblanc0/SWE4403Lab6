@@ -1,4 +1,4 @@
-package com.designpatterns.facade;
+package ca.brennanleblanc.SWE4403Lab6.E03;
 
 public class OAuth {
   public String requestToken(String appKey, String appSecret) {
