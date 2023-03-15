@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>180</y>
+      <w>270</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Cell
+--
+- row: int {readOnly}
+- column: int {readOnly}
+- content: String
+- fontFamily: String
+- fontSize: int
+- isBold: boolean
+--
++ Cell(row, column: int)
++ getContent(): String
++ setContent(content: String): void
++ getFontFamily(): String
++ setFontFamily(fontFamily: String): void
++ getFontSize(): int
++ setFontSize(fontSize: int): void
++ isBold(): boolean
++ setBold(bold: boolean): void
++ render(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>180</y>
+      <w>350</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>SpreadSheet
+--
+- MAX_ROWS: int = 3 {readOnly}
+- MAX_COLS: int = 3 {readOnly}
+- fontFamily: String = "Times New Roman" {readOnly}
+- fontSize: int = 12 {readOnly}
+- isBold: boolean = false {readOnly}
+- cells: Cells[MAX_ROWS][MAX_COLS]
+--
++ SpreadSheet()
++ setContent(row, col: int, content: String): void
++ setFontFamily(row, col: int, fontFamily: String): void
+- ensureCellsExist(row, col: int): void
+- generateCells(): void
++ render(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>180</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Demo
+--
+main(args: String[]): void
+show(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>180</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>180</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+</diagram>
